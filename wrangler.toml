@@ -1,7 +1,8 @@
 name = "mnasrullahdotcom"
-main = "apps/web/dist/server/entry.js"
 compatibility_date = "2024-10-30"
-compatibility_flags = ["nodejs_compat"]
 
-[vars]
-NODE_ENV = "production"
+[pages]
+compatibility_flags = ["nodejs_compat_v2"]
+
+[env.production]
+compatibility_flags = ["nodejs_compat_v2"]

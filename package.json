@@ -1,0 +1,47 @@
+{
+  "name": "mnasrullahdotcom",
+  "private": true,
+  "type": "module",
+  "workspaces": {
+    "packages": [
+      "apps/*",
+      "packages/*"
+    ],
+    "catalog": {
+      "zod": "^4.0.2",
+      "better-auth": "^1.3.28",
+      "dotenv": "^17.2.2",
+      "tsdown": "^0.15.5"
+    }
+  },
+  "scripts": {
+    "prepare": "husky",
+    "dev": "bun run --filter '*' dev",
+    "build": "bun run --filter '*' build",
+    "check-types": "bun run --filter '*' check-types",
+    "dev:native": "bun run --filter native dev",
+    "dev:web": "bun run --filter web dev",
+    "db:push": "bun run --filter @mnasrullahdotcom/db db:push",
+    "db:studio": "bun run --filter @mnasrullahdotcom/db db:studio",
+    "db:generate": "bun run --filter @mnasrullahdotcom/db db:generate",
+    "db:migrate": "bun run --filter @mnasrullahdotcom/db db:migrate",
+    "db:start": "bun run --filter @mnasrullahdotcom/db db:start",
+    "db:watch": "bun run --filter @mnasrullahdotcom/db db:watch",
+    "db:stop": "bun run --filter @mnasrullahdotcom/db db:stop",
+    "db:down": "bun run --filter @mnasrullahdotcom/db db:down"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.2",
+    "zod": "^4.1.11"
+  },
+  "devDependencies": {
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.2",
+    "tsdown": "^0.15.5",
+    "@types/node": "^22.13.11"
+  },
+  "lint-staged": {
+    "**/*.{js,mjs,cjs,jsx,ts,mts,cts,tsx,vue,astro,svelte}": ""
+  },
+  "packageManager": "bun@1.2.23"
+}

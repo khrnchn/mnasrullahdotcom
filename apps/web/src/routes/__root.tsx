@@ -8,7 +8,6 @@ import {
 	useRouterState,
 } from "@tanstack/react-router";
 import { TanStackRouterDevtools } from "@tanstack/react-router-devtools";
-import Header from "../components/header";
 import appCss from "../index.css?url";
 import Loader from "@/components/loader";
 
@@ -25,7 +24,7 @@ export const Route = createRootRouteWithContext<RouterAppContext>()({
 				content: "width=device-width, initial-scale=1",
 			},
 			{
-				title: "My App",
+				title: "mnasrullah.com",
 			},
 		],
 		links: [
@@ -47,8 +46,7 @@ function RootDocument() {
 				<HeadContent />
 			</head>
 			<body>
-				<div className="grid h-svh grid-rows-[auto_1fr]">
-					<Header />
+				<div className="h-svh">
 					{isFetching ? <Loader /> : <Outlet />}
 				</div>
 				<Toaster richColors />

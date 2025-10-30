@@ -38,8 +38,7 @@
     "@types/node": "^22.13.11",
     "husky": "^9.1.7",
     "lint-staged": "^16.1.2",
-    "tsdown": "^0.15.5",
-    "wrangler": "^4.45.2"
+    "tsdown": "^0.15.5"
   },
   "lint-staged": {
     "**/*.{js,mjs,cjs,jsx,ts,mts,cts,tsx,vue,astro,svelte}": ""

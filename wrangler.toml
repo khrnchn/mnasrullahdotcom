@@ -1,8 +1,0 @@
-name = "mnasrullahdotcom"
-compatibility_date = "2024-10-30"
-
-[pages]
-compatibility_flags = ["nodejs_compat_v2"]
-
-[env.production]
-compatibility_flags = ["nodejs_compat_v2"]

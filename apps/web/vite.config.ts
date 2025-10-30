@@ -4,11 +4,4 @@ import { tanstackStart } from "@tanstack/react-start/plugin/vite";
 
 export default defineConfig({
 	plugins: [tsconfigPaths(), tanstackStart()],
-	build: {
-		outDir: "dist",
-		emptyOutDir: true,
-	},
-	ssr: {
-		target: "webworker",
-	},
 });

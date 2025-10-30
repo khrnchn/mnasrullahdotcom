@@ -5,7 +5,9 @@
   "scripts": {
     "build": "vite build",
     "serve": "vite preview",
-    "dev": "vite dev --port=3001"
+    "dev": "vite dev --port=3001",
+    "deploy": "wrangler deploy",
+    "deploy:prod": "wrangler deploy --env production"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",

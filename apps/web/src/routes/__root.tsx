@@ -1,4 +1,6 @@
 import { Toaster } from "@/components/ui/sonner";
+import { ThemeProvider } from "@/components/theme-provider";
+import { ThemeSwitcher } from "@/components/theme-switcher";
 
 import {
 	HeadContent,
@@ -41,16 +43,23 @@ export const Route = createRootRouteWithContext<RouterAppContext>()({
 function RootDocument() {
 	const isFetching = useRouterState({ select: (s) => s.isLoading });
 	return (
-		<html lang="en" className="dark">
+		<html lang="en" suppressHydrationWarning>
 			<head>
 				<HeadContent />
 			</head>
 			<body>
-				<div className="h-svh">
-					{isFetching ? <Loader /> : <Outlet />}
-				</div>
-				<Toaster richColors />
-				<TanStackRouterDevtools position="bottom-left" />
+				<ThemeProvider
+					attribute="class"
+					defaultTheme="dark"
+					enableSystem
+				>
+					<div className="h-svh relative">
+						{isFetching ? <Loader /> : <Outlet />}
+						<ThemeSwitcher />
+					</div>
+					<Toaster richColors />
+					<TanStackRouterDevtools position="bottom-left" />
+				</ThemeProvider>
 				<Scripts />
 			</body>
 		</html>

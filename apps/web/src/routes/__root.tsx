@@ -1,6 +1,4 @@
 import { Toaster } from "@/components/ui/sonner";
-import { ThemeProvider } from "@/components/theme-provider";
-import { ThemeSwitcher } from "@/components/theme-switcher";
 
 import {
 	HeadContent,
@@ -47,19 +45,12 @@ function RootDocument() {
 			<head>
 				<HeadContent />
 			</head>
-			<body>
-				<ThemeProvider
-					attribute="class"
-					defaultTheme="dark"
-					enableSystem
-				>
-					<div className="h-svh relative">
-						{isFetching ? <Loader /> : <Outlet />}
-						<ThemeSwitcher />
-					</div>
-					<Toaster richColors />
-					<TanStackRouterDevtools position="bottom-left" />
-				</ThemeProvider>
+			<body className="dark">
+				<div className="h-svh relative">
+					{isFetching ? <Loader /> : <Outlet />}
+				</div>
+				<Toaster richColors />
+				<TanStackRouterDevtools position="bottom-left" />
 				<Scripts />
 			</body>
 		</html>

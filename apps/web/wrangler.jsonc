@@ -5,7 +5,7 @@
     "compatibility_flags": [
         "nodejs_compat"
     ],
-    "main": "dist/server/index.js",
+    "main": "@tanstack/react-start/server-entry",
     "routes": [
         {
             "pattern": "mnasrullah.com",

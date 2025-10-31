@@ -45,7 +45,7 @@ function RootDocument() {
 			<head>
 				<HeadContent />
 			</head>
-			<body className="dark">
+			<body>
 				<div className="h-svh relative">
 					{isFetching ? <Loader /> : <Outlet />}
 				</div>
